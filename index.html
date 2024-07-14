@@ -1,13 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
-    <title>Pagina de karate</title>
+    <title>Pagina de Karate</title>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link rel="stylesheet" href="CSS/estilo.css">
 
     <!-- Bootstrap CSS v5.3.3 -->
     <link
@@ -16,14 +14,12 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="styles.css" />
   </head>
 
   <body>
     <header>
-      <!-- place navbar here -->
-    </header>
-    <main>
-      <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">LOGO</a>
           <button
@@ -40,19 +36,18 @@
           <div class="collapse navbar-collapse" id="navbarColor02">
             <ul class="navbar-nav me-auto">
               <li class="nav-item">
-                <a class="nav-link active" href="#"
-                  >Home
-                  <span class="visually-hidden">(current)</span>
-                </a>
+                <a class="nav-link active" href="#inicio"
+                  >Inicio <span class="visually-hidden">(current)</span></a
+                >
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Features</a>
+                <a class="nav-link" href="#nosotros">Nosotros</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Pricing</a>
+                <a class="nav-link" href="#clases">Clases</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">About</a>
+                <a class="nav-link" href="#contacto">Contacto</a>
               </li>
               <li class="nav-item dropdown">
                 <a
@@ -62,14 +57,14 @@
                   role="button"
                   aria-haspopup="true"
                   aria-expanded="false"
-                  >Dropdown</a
+                  >Más</a
                 >
                 <div class="dropdown-menu">
-                  <a class="dropdown-item" href="#">Action</a>
-                  <a class="dropdown-item" href="#">Another action</a>
-                  <a class="dropdown-item" href="#">Something else here</a>
+                  <a class="dropdown-item" href="#">Galería</a>
+                  <a class="dropdown-item" href="#">Eventos</a>
+                  <a class="dropdown-item" href="#">Blog</a>
                   <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="#">Separated link</a>
+                  <a class="dropdown-item" href="#">Testimonios</a>
                 </div>
               </li>
             </ul>
@@ -77,26 +72,108 @@
               <input
                 class="form-control me-sm-2"
                 type="search"
-                placeholder="Search"
+                placeholder="Buscar"
               />
               <button class="btn btn-secondary my-2 my-sm-0" type="submit">
-                Search
+                Buscar
               </button>
             </form>
           </div>
         </div>
       </nav>
+    </header>
+
+    <main>
+      <section id="inicio" class="text-center p-5 bg-light">
+        <div class="container">
+          <h1>Bienvenidos al Dojo de Karate</h1>
+          <p class="lead">Donde el espíritu y la disciplina se encuentran.</p>
+        </div>
+      </section>
+
+      <section id="nosotros" class="text-center p-5">
+        <div class="container">
+          <h2>Sobre Nosotros</h2>
+          <p>Información sobre la historia del dojo, los instructores y la filosofía.</p>
+        </div>
+      </section>
+
+      <section id="clases" class="text-center p-5 bg-light">
+        <div class="container">
+          <h2>Nuestras Clases</h2>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="card mb-4 shadow-sm">
+                <img src="principiantes.jpg" class="card-img-top" alt="Principiantes">
+                <div class="card-body">
+                  <h3 class="card-title">Principiantes</h3>
+                  <p class="card-text">Detalles sobre las clases para principiantes.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card mb-4 shadow-sm">
+                <img src="intermedios.jpg" class="card-img-top" alt="Intermedios">
+                <div class="card-body">
+                  <h3 class="card-title">Intermedios</h3>
+                  <p class="card-text">Detalles sobre las clases para intermedios.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card mb-4 shadow-sm">
+                <img src="avanzados.jpg" class="card-img-top" alt="Avanzados">
+                <div class="card-body">
+                  <h3 class="card-title">Avanzados</h3>
+                  <p class="card-text">Detalles sobre las clases para avanzados.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contacto" class="text-center p-5">
+        <div class="container">
+          <h2>Contacto</h2>
+          <form action="#" method="post" class="row g-3">
+            <div class="col-md-6">
+              <label for="nombre" class="form-label">Nombre:</label>
+              <input type="text" class="form-control" id="nombre" name="nombre" required>
+            </div>
+            <div class="col-md-6">
+              <label for="email" class="form-label">Correo Electrónico:</label>
+              <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+            <div class="col-12">
+              <label for="mensaje" class="form-label">Mensaje:</label>
+              <textarea class="form-control" id="mensaje" name="mensaje" rows="4" required></textarea>
+            </div>
+            <div class="col-12">
+              <button type="submit" class="btn btn-dark">Enviar</button>
+            </div>
+          </form>
+        </div>
+      </section>
     </main>
-    <footer>
-      <!-- place footer here -->
+
+    <footer class="bg-dark text-white text-center p-3">
+      <div class="container">
+        <p>&copy; 2024 Dojo de Karate. Todos los derechos reservados.</p>
+        <div class="d-flex justify-content-center">
+          <a href="#" class="text-white mx-2">Facebook</a>
+          <a href="#" class="text-white mx-2">Twitter</a>
+          <a href="#" class="text-white mx-2">Instagram</a>
+        </div>
+      </div>
     </footer>
+
     <!-- Bootstrap JavaScript Libraries -->
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
       integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
       crossorigin="anonymous"
     ></script>
-
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
